@@ -70,18 +70,16 @@ contract HelloWorld{
     }
 }
 ```
-* ```
-function conditon(uint x) public pure returns(uint){
-        if(x<10){
-            return 0;
-        }else if(x<20){
-            return 1;
-        }else{
-            return 2;
-        }
-}```   
+* ```function conditon(uint x) public pure returns(uint){if(x<10){}```  
     
-    &emsp; This function returns 0 if x is less than 10, otherwise, returns 1 if x is less than 20, otherwise returns 2.
-    * *If, else-if, and else* conditions play similarly as in JavaScript.
-    * *pure* keyword represents a function modifier which cannot read any state variable from the contract. It can only operate on the parameters of the function. 
+&emsp; This function returns 0 if x is less than 10, otherwise, returns 1 if x is less than 20, otherwise returns 2.
+* *If, else-if, and else* conditions play similarly as in JavaScript.  
+``` if(x<10){return 0;}else if(x<20){return 1;}else{return 2;}```
     
+* *pure* keyword represents a function modifier which cannot read any state variable from the contract. It can only operate on the parameters of the function.   
+
+* ```function ternary(uint _x) public pure returns(uint){return _x < 10 ? 1 : 2;} ```  
+    &emsp; This function returns 1 is _x<10 and 2 if _x> or equal to 10. 
+    * Ternary condition is short-hand to if-else condition. 
+    * Observe the statement ```return _x < 10 ? 1 : 2;``` which shows that if _x<10 return 1 otherwise return 2.
+    * **NOTE:** ```return _x < 10 ? 1 : 2;``` has space after each term.
