@@ -21,7 +21,7 @@ Learnings:
 * ```contract HelloWorld{}  ```
   
   &emsp; *contract* defines a class which has it's own Properties and functions that we define. Like here we define the contract HelloWorld which has the property that it greets Good Morning!
-* ```string public greet ="Good Morning!"; *inside {}*```
+* ```string public greet ="Good Morning!"; ```
   * *string* is a data type representing text
   * *public* shows that the string is public and it is visible to other contracts outside of HelloWorld
   * *greet* is the string where we store "Good Morning!"
