@@ -24,7 +24,7 @@ Learnings:
 * ```string public greet ="Good Morning!"; ```
   * *string* is a data type representing text
   * *public* shows that the string is public and it is visible to other contracts outside of HelloWorld
-  * *greet* is the string where we store "Good Morning!"
+  * *greet* is the string name where we store "Good Morning!"
 
 ## Read and Write
 ```
@@ -83,3 +83,28 @@ contract HelloWorld{
     * Ternary condition is short-hand to if-else condition. 
     * Observe the statement ```return _x < 10 ? 1 : 2;``` which shows that if _x<10 return 1 otherwise return 2.
     * **NOTE:** ```return _x < 10 ? 1 : 2;``` has space after each term.
+
+## Mapping 
+```  
+contract HelloWorld{
+mapping(address => uint) public myMap;
+    
+    function set(address _addr, uint _i) public {
+        myMap[_addr] = _i;
+    }
+    function get(address _addr) public view returns(uint){
+        return myMap[_addr];
+    }
+    function remove(address _addr) public{
+        delete myMap[_addr];
+    }
+   
+}
+```
+
+Mapping is of syntax *mapping(keyType => valueType)* **mapName**.   
+
+keyType can be any datatype among uint, address, or bytes.   
+
+valueType can be any datatype.  
+
